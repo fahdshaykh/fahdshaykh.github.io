@@ -96,4 +96,11 @@
   .text-container {
     text-align: justify;
   }
+  #projects .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects .details-container {
+    width: 100%;
+  }
 }
