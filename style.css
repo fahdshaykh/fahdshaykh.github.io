@@ -420,28 +420,32 @@ article .icon {
 }
 /* PROJECTS SECTION */
 
-/* Fix Projects responsiveness */
-#projects .about-containers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+}
+
+/* ✅ Responsive Grid Layout for Projects */
+.about-containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-#projects .details-container {
-  flex: 1 1 300px; /* flexible cards */
-  max-width: 350px;
-}
-
-.color-container {
-  border-color: var(--container-border);
-  background: var(--primary-color-2);
+/* Subtle hover effect */
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 .project-title {
